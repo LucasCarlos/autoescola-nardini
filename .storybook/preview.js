@@ -1,24 +1,27 @@
 import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
+import { select } from "@storybook/addon-knobs";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
+import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
 
 addDecorator((storyFn) => (
   <>
     <GlobalStyle />
-    {storyFn()}
+    <ThemeProvider>{storyFn()}</ThemeProvider>
   </>
 ));
+
 const viewports = {
   extraSmall: {
-    nome: "Portrait phone (default)",
+    name: "Portrait phone (default)",
     styles: {
       width: "360px",
       height: "640px",
     },
   },
   small: {
-    nome: "Landscape phone (sm)",
+    name: "Landscape phone (sm)",
     styles: {
       width: "640px",
       height: "360px",
