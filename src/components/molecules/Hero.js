@@ -13,7 +13,7 @@ const Root = styled.div`
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
-  `};
+  `}
 `;
 
 const Content = styled.div`
