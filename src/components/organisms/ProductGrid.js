@@ -13,7 +13,7 @@ const Toolbar = styled.div`
 `;
 
 const ProductGrid = ({ products }) => {
-  const [showAll, SetShowlAll] = useState(false);
+  const [showAll, SetShowAll] = useState(false);
   const filteredProducts = showAll ? products : products.slice(0, 3);
 
   return (
@@ -39,7 +39,7 @@ const ProductGrid = ({ products }) => {
           <Button
             variant="outlined"
             onClick={() => {
-              SetShowlAll(true);
+              SetShowAll(true);
             }}
           >
             Lista completa de serviços
