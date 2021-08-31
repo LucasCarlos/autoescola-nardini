@@ -9,11 +9,11 @@ jobs:
       - image: circleci/node:14.17.6-browsers
     steps:
       - checkout
-      - node/install:
-          install-yarn: true
+      - node/install-yarn
       - run: node --version
       - run: yarn --version
 
 workflows:
   ci:
-    - setup
+    jobs:
+      - setup
